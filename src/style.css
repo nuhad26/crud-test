@@ -1,0 +1,387 @@
+.App {
+    padding: px 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #d9c5a3; 
+}
+
+.rentcar {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.car {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    background-color: #f3ead8; 
+    color: #6b4c2a; 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.2);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.car:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.35);
+}
+
+.car h2 {
+    color: #805b36;
+    margin-bottom: 10px;
+}
+
+.car h3 {
+    color: #a67c00;
+    margin-bottom: 6px;
+}
+
+.car p {
+    font-weight: bold;
+    color: #a67c00;
+}
+.car-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 20px;
+  background: #D9C5A399;
+}
+
+.car-gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  animation: carShow 0.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes carShow {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.delete, .update, .formButton a {
+    background: linear-gradient(to right, #d7a86e, #b8860b);
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    color: #4a2f0a;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0 3px 8px rgba(184, 134, 11, 0.3);
+    transition: background 0.3s ease;
+}
+
+.delete:hover, .update:hover, .formButton a:hover {
+    background: #b8860b;
+    color: #fff8e1;
+    box-shadow: 0 5px 15px rgba(184, 134, 11, 0.5);
+}
+
+.update a, .formButton a {
+    color: #4a2f0a;
+    text-decoration: none;
+}
+
+.formButton {
+    margin-top: 30px;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #c9a66b, #a87c1a);
+    border: none;
+    color: #3e2f0b;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(184, 134, 11, 0.4);
+    transition: background 0.3s ease;
+}
+
+.formButton:hover {
+    background: linear-gradient(90deg, #a87c1a, #c9a66b);
+    color: #fff8e1;
+}
+
+input {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #bda06e;
+    border-radius: 6px;
+    background-color: #f7f1e1;
+    color: #6b4c2a;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #a87c1a;
+    box-shadow: 0 0 5px #a87c1a;
+}
+.home-btn {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.home-btn a {
+  text-decoration: none;
+  background: #d7a86e;
+  color: #4a2f0a;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(215, 168, 110, 0.5);
+  transition: all 0.3s ease;
+}
+
+.home-btn a:hover {
+  background: #c89454;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #c9a66b, #a87c1a);
+  padding: 1rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4a2f0a;
+  box-shadow: 0 2px 8px rgba(168, 124, 26, 0.4);
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-logo h2 {
+  color: #fbecbb;
+  font-size: 1.8rem;
+  margin: 0px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-shadow: 1px 1px 3px #805b36;
+}
+.nav-logo img1{
+  height: 10px;
+  width: 10px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #fbecbb;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+}
+
+.nav-links li a:hover {
+  background-color: #d7a86e;
+  color: #4a2f0a;
+}
+
+.home {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #c9a66b, #e6d1a3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    color: #6b4c2a;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+.homepage {
+    background: rgba(217, 197, 163, 0.6);
+    padding: 40px 60px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.15);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+     background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      gap: 20px;
+    justify-content: center;
+    align-items: center;
+      animation: changeBackground 20s infinite;
+    height: 100%;
+    color: #5c3d00;
+}
+@keyframes changeBackground {
+  0% { background-image: url(''); }
+  25% { background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/73/Mahindra_Thar_2020.jpg'); }
+  50% { background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b4/Maruti_Suzuki_Baleno_2022.jpg'); }
+  75% { background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2b/Kia_Seltos_2023.jpg'); }
+  100% { background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6a/Tata_Safari_2021.jpg'); }
+}
+
+.homepage h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.homepage p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.addcar {
+    padding: 12px 28px;
+    font-size: 1rem;
+    background: #d7a86e;
+    color: #4a2f0a;
+    margin: 0 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(168, 124, 26, 0.4);
+}
+
+.addcar:hover {
+    background: #a87c1a;
+    color: white;
+    gap: 20px;
+    border: #3e2f0b;
+    box-shadow: 0 8px 25px rgba(168, 124, 26, 0.6);
+    transform: translateY(-2px);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f7e7c6, #d9c5a3);
+    margin: 0;
+    padding: 0;
+}
+
+.table {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    font-family: "Poppins", sans-serif;
+    color: #6b4c2a;
+    flex: 1;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fffaf3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.table h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.title h1 {
+    text-align: center;
+    color: #805b36;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #f3ead8;
+    border: 2px solid #c9a66b;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(201, 166, 107, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #6b4c2a;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #a67c00;
+}
+
+.form-input {
+    padding: 12px;
+    border: 2px solid #c9a66b;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    background-color: #fff8e1;
+    color: #6b4c2a;
+}
+
+.form-input:focus {
+    border-color: #a87c1a;
+    box-shadow: 0 0 5px rgba(168, 124, 26, 0.5);
+}
+
+.form-button {
+    padding: 12px;
+    background-color: #a87c1a;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(168, 124, 26, 0.6);
+}
+
+.form-button:hover {
+    background-color: #d7a86e;
+    color: #4a2f0a;
+    box-shadow: 0 6px 18px rgba(215, 168, 110, 0.8);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
